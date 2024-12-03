@@ -11,11 +11,11 @@
 
   <div class="timer-app">
     <div class="time-buttons">
-      <button class="pomodoro-btn active">Pomodoro</button>
-      <button class="short-break-btn">Short Break</button>
-      <button class="long-break-btn">Long Break</button>
+      <button class="pomodoro-btn active">moj dan</button>
+      <button class="short-break-btn">dnevnik</button>
+      <button class="long-break-btn">napravi savrsen dan</button>
     </div>
-    <div class="time-display">
+    <div class="time-display" style="display: none;">
       <span class="minutes">
         <span class="digit">2</span>
         <span class="digit">5</span>
@@ -26,6 +26,9 @@
         <span class="digit">0</span>
       </span>
     </div>
+    <div class="task-list-display">
+      <ul class="task-list"></ul>
+    </div>
     <div class="long-break-interval-counter"></div>
     <div class="controls">
       <button class="start-btn">Start</button>
@@ -33,17 +36,18 @@
       <button class="settings-btn">Settings</button>
     </div>
     <div class="task-manager">
-      <ul class="task-list"></ul>
       <input type="text" class="task-input" placeholder="Enter a new task">
+      <input type="time" class="task-start-time" placeholder="Start Time">
+      <input type="number" class="task-duration" placeholder="Duration (minutes)">
       <button class="add-task-btn">Add Task</button>
     </div>
   </div>
 
   <div class="settings-menu-overlay" style="display: none;"></div>
   <div class="settings-menu" style="display: none;">
-    <label>Pomodoro Duration (minutes): <input type="number" id="pomodoro-duration" value="25" max="999"></label>
-    <label>Short Break Duration (minutes): <input type="number" id="short-break-duration" value="5" max="999"></label>
-    <label>Long Break Duration (minutes): <input type="number" id="long-break-duration" value="15" max="999"></label>
+    <label>moj dan Duration (minutes): <input type="number" id="pomodoro-duration" value="25" max="999"></label>
+    <label>dnevnik Duration (minutes): <input type="number" id="short-break-duration" value="5" max="999"></label>
+    <label>napravi savrsen dan Duration (minutes): <input type="number" id="long-break-duration" value="15" max="999"></label>
     <label>Long Break Interval: <input type="number" id="long-break-interval" value="4"></label>
     <label>Auto Start Pomodoros: <input type="checkbox" id="auto-start-pomodoros"></label>
     <label>Auto Start Short Breaks: <input type="checkbox" id="auto-start-breaks" checked></label>
